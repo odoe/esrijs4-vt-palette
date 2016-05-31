@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Vector Tile Brew-master</title>
+
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+    
+    .list-group-item {
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    var locationPath = location.pathname.replace(/\/[^\/]+$/, '');
+    window.dojoConfig = {
+      deps: ['app/main'],
+      packages: [{
+        name: 'app',
+        location: locationPath + 'app',
+        main: 'main'
+      }]
+    };
+  </script>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.0/esri/css/main.css">
+  <link href="http://esri.github.io/calcite-bootstrap/assets/css/calcite-bootstrap-open.min.css" rel="stylesheet">
+  <script src="http://google.github.io/palette.js/palette.js"></script>
+  <script src="https://js.arcgis.com/4.0/"></script>
+</head>
+
+<body class="calicte">
+  <div id="viewDiv"></div>
+</body>
+
+</html>
